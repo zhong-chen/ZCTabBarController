@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "ZCTabBarController.h"
+#import "ZCHomeViewController.h"
+#import "ZCMoodViewController.h"
+#import "ZCMessageViewController.h"
+#import "ZCMineViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +21,47 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ZCTabBarController *tab = [[ZCTabBarController alloc] init];
+    self.window.rootViewController = tab;
+    UINavigationController *nav1 = [self tabBarItemController:[ZCHomeViewController new] title:@"电台" image:@"btn_zhibo_off" selectedImage:@"btn_zhibo_on"];
+    UINavigationController *nav2 = [self tabBarItemController:[ZCMoodViewController new] title:@"互动" image:@"btn_hudong_off" selectedImage:@"btn_hudong_on"];
+    UINavigationController *nav3 = [self tabBarItemController:[ZCMessageViewController new] title:@"消息" image:@"btn_news_off" selectedImage:@"btn_news_on"];
+    UINavigationController *nav4 = [self tabBarItemController:[ZCMineViewController new] title:@"我的" image:@"btn_my_off" selectedImage:@"btn_my_on"];
+    tab.viewControllers = @[nav1, nav2, nav3, nav4];
+    [self.window makeKeyAndVisible];
+    [self setUpTabBarItemTextAttributes];
     return YES;
+}
+
+- (UINavigationController *)tabBarItemController:(UIViewController *)controller title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+    UITabBarItem *tabBatItem = [[UITabBarItem alloc] init];
+    tabBatItem.title = nil;
+    tabBatItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabBatItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabBatItem.titlePositionAdjustment = UIOffsetMake(0.0, -3.0);
+    tabBatItem.imageInsets = UIEdgeInsetsMake(1, 0, -1, 0);
+    controller.tabBarItem = tabBatItem;
+    controller.title = title;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    return nav;
+}
+
+- (void)setUpTabBarItemTextAttributes {
+    
+    // 普通状态下的文字属性
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
+    // 选中状态下的文字属性
+    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:246/256.0 green:143/256.0 blue:92/256.0 alpha:1];
+    
+    // 设置文字属性
+    UITabBarItem *tabBar = [UITabBarItem appearance];
+    [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    [tabBar setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+    
 }
 
 

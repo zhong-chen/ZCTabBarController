@@ -12,6 +12,12 @@
 		CF35811B20CB843900A2CBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF35811A20CB843900A2CBB8 /* Assets.xcassets */; };
 		CF35812120CB843900A2CBB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35812020CB843900A2CBB8 /* main.m */; };
 		CF35812B20CB843900A2CBB8 /* ZCTabBarControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35812A20CB843900A2CBB8 /* ZCTabBarControllerDemoTests.m */; };
+		CF35813820CC484200A2CBB8 /* ZCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35813720CC484200A2CBB8 /* ZCTabBarController.m */; };
+		CF35813B20CC488E00A2CBB8 /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35813A20CC488E00A2CBB8 /* ZCTabBar.m */; };
+		CF35814320CC4A8C00A2CBB8 /* ZCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35814220CC4A8C00A2CBB8 /* ZCHomeViewController.m */; };
+		CF35814620CC4AA300A2CBB8 /* ZCMoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35814520CC4AA300A2CBB8 /* ZCMoodViewController.m */; };
+		CF35814920CC4AD000A2CBB8 /* ZCMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35814820CC4AD000A2CBB8 /* ZCMessageViewController.m */; };
+		CF35814C20CC4AE800A2CBB8 /* ZCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF35814B20CC4AE800A2CBB8 /* ZCMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,18 @@
 		CF35812620CB843900A2CBB8 /* ZCTabBarControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZCTabBarControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35812A20CB843900A2CBB8 /* ZCTabBarControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTabBarControllerDemoTests.m; sourceTree = "<group>"; };
 		CF35812C20CB843900A2CBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF35813620CC484200A2CBB8 /* ZCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCTabBarController.h; sourceTree = "<group>"; };
+		CF35813720CC484200A2CBB8 /* ZCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTabBarController.m; sourceTree = "<group>"; };
+		CF35813920CC488E00A2CBB8 /* ZCTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCTabBar.h; sourceTree = "<group>"; };
+		CF35813A20CC488E00A2CBB8 /* ZCTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTabBar.m; sourceTree = "<group>"; };
+		CF35814120CC4A8C00A2CBB8 /* ZCHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCHomeViewController.h; sourceTree = "<group>"; };
+		CF35814220CC4A8C00A2CBB8 /* ZCHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCHomeViewController.m; sourceTree = "<group>"; };
+		CF35814420CC4AA300A2CBB8 /* ZCMoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCMoodViewController.h; sourceTree = "<group>"; };
+		CF35814520CC4AA300A2CBB8 /* ZCMoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCMoodViewController.m; sourceTree = "<group>"; };
+		CF35814720CC4AD000A2CBB8 /* ZCMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCMessageViewController.h; sourceTree = "<group>"; };
+		CF35814820CC4AD000A2CBB8 /* ZCMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCMessageViewController.m; sourceTree = "<group>"; };
+		CF35814A20CC4AE800A2CBB8 /* ZCMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCMineViewController.h; sourceTree = "<group>"; };
+		CF35814B20CC4AE800A2CBB8 /* ZCMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCMineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,7 @@
 		CF35811020CB843800A2CBB8 /* ZCTabBarControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF35813C20CC49B600A2CBB8 /* Classes */,
 				CF35811120CB843800A2CBB8 /* AppDelegate.h */,
 				CF35811220CB843800A2CBB8 /* AppDelegate.m */,
 				CF35811420CB843800A2CBB8 /* ViewController.h */,
@@ -101,8 +120,59 @@
 		CF35813520CC37DE00A2CBB8 /* ZCTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				CF35813620CC484200A2CBB8 /* ZCTabBarController.h */,
+				CF35813720CC484200A2CBB8 /* ZCTabBarController.m */,
+				CF35813920CC488E00A2CBB8 /* ZCTabBar.h */,
+				CF35813A20CC488E00A2CBB8 /* ZCTabBar.m */,
 			);
 			path = ZCTabBarController;
+			sourceTree = "<group>";
+		};
+		CF35813C20CC49B600A2CBB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF35813D20CC4A0300A2CBB8 /* Home */,
+				CF35813E20CC4A1100A2CBB8 /* Mood */,
+				CF35813F20CC4A2500A2CBB8 /* Message */,
+				CF35814020CC4A3600A2CBB8 /* Mine */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF35813D20CC4A0300A2CBB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF35814120CC4A8C00A2CBB8 /* ZCHomeViewController.h */,
+				CF35814220CC4A8C00A2CBB8 /* ZCHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF35813E20CC4A1100A2CBB8 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				CF35814420CC4AA300A2CBB8 /* ZCMoodViewController.h */,
+				CF35814520CC4AA300A2CBB8 /* ZCMoodViewController.m */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		CF35813F20CC4A2500A2CBB8 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				CF35814720CC4AD000A2CBB8 /* ZCMessageViewController.h */,
+				CF35814820CC4AD000A2CBB8 /* ZCMessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		CF35814020CC4A3600A2CBB8 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				CF35814A20CC4AE800A2CBB8 /* ZCMineViewController.h */,
+				CF35814B20CC4AE800A2CBB8 /* ZCMineViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF35814C20CC4AE800A2CBB8 /* ZCMineViewController.m in Sources */,
+				CF35814320CC4A8C00A2CBB8 /* ZCHomeViewController.m in Sources */,
+				CF35813820CC484200A2CBB8 /* ZCTabBarController.m in Sources */,
 				CF35811620CB843800A2CBB8 /* ViewController.m in Sources */,
 				CF35812120CB843900A2CBB8 /* main.m in Sources */,
+				CF35814620CC4AA300A2CBB8 /* ZCMoodViewController.m in Sources */,
+				CF35814920CC4AD000A2CBB8 /* ZCMessageViewController.m in Sources */,
+				CF35813B20CC488E00A2CBB8 /* ZCTabBar.m in Sources */,
 				CF35811320CB843800A2CBB8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
