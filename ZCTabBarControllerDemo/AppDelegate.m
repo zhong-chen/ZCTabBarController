@@ -24,27 +24,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ZCTabBarController *tab = [[ZCTabBarController alloc] init];
     self.window.rootViewController = tab;
-    UINavigationController *nav1 = [self tabBarItemController:[ZCHomeViewController new] title:@"电台" image:@"btn_zhibo_off" selectedImage:@"btn_zhibo_on"];
-    UINavigationController *nav2 = [self tabBarItemController:[ZCMoodViewController new] title:@"互动" image:@"btn_hudong_off" selectedImage:@"btn_hudong_on"];
-    UINavigationController *nav3 = [self tabBarItemController:[ZCMessageViewController new] title:@"消息" image:@"btn_news_off" selectedImage:@"btn_news_on"];
-    UINavigationController *nav4 = [self tabBarItemController:[ZCMineViewController new] title:@"我的" image:@"btn_my_off" selectedImage:@"btn_my_on"];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[ZCHomeViewController new]];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[ZCMoodViewController new]];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:[ZCMessageViewController new]];
+    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:[ZCMineViewController new]];
+    NSDictionary *attrs1 = @{@"title" : @"电台", @"image" : @"btn_zhibo_off", @"selectedImage" : @"btn_zhibo_on"};
+    NSDictionary *attrs2 = @{@"title" : @"互动", @"image" : @"btn_hudong_off", @"selectedImage" : @"btn_hudong_on"};
+    NSDictionary *attrs3 = @{@"title" : @"消息", @"image" : @"btn_news_off", @"selectedImage" : @"btn_news_on"};
+    NSDictionary *attrs4 = @{@"title" : @"我的", @"image" : @"btn_my_off", @"selectedImage" : @"btn_my_on"};
+    tab.tabBarItemsAttributes = @[attrs1, attrs2, attrs3, attrs4];
     tab.viewControllers = @[nav1, nav2, nav3, nav4];
     [self.window makeKeyAndVisible];
-    [self setUpTabBarItemTextAttributes];
+    //[self setUpTabBarItemTextAttributes];
     return YES;
-}
-
-- (UINavigationController *)tabBarItemController:(UIViewController *)controller title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
-    UITabBarItem *tabBatItem = [[UITabBarItem alloc] init];
-    tabBatItem.title = nil;
-    tabBatItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    tabBatItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    tabBatItem.titlePositionAdjustment = UIOffsetMake(0.0, -3.0);
-    tabBatItem.imageInsets = UIEdgeInsetsMake(1, 0, -1, 0);
-    controller.tabBarItem = tabBatItem;
-    controller.title = title;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
-    return nav;
 }
 
 - (void)setUpTabBarItemTextAttributes {

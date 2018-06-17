@@ -10,4 +10,7 @@
 
 @interface ZCTabBarController : UITabBarController
 
+@property (nonatomic, readwrite, copy) NSArray *viewControllers;
+@property (nonatomic, readwrite, copy) NSArray *tabBarItemsAttributes;
+
 @end
