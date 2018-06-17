@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"消息";
     self.view.backgroundColor = [UIColor grayColor];
 }
 

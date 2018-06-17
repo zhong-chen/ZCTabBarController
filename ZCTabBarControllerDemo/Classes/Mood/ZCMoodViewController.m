@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"互动";
     self.view.backgroundColor = [UIColor lightGrayColor];
 }
 

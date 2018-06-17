@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"电台1";
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
